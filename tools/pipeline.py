@@ -65,6 +65,19 @@ def load_json(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def reviewed_master(manifest):
+    """The editorial review identifies the exact cut and its visual and rights evidence."""
+    review = manifest.get("editorial_review")
+    return bool(
+        manifest.get("state") == "APPROVED"
+        and isinstance(review, dict)
+        and manifest.get("sha256")
+        and review.get("sha256") == manifest["sha256"]
+        and review.get("visual_evidence")
+        and review.get("rights_reference")
+    )
+
+
 def catalog():
     facts, posts = {}, []
     for file in ("seed.json", "series.json"):
@@ -180,6 +193,9 @@ def plan(facts, posts, snapshot, db, output, now):
     for post in sorted(posts, key=lambda item: rank.get(item["id"], len(rank))):
         state, reason, valid_until = eligibility(post, snapshot["facts"], now)
         manifest = prepare_pack(post, facts, output, renderer) if state == "READY_LOCAL" else {}
+        if state == "READY_LOCAL" and not reviewed_master(manifest):
+            state = "PREVIEW_ONLY"
+            reason = "Montage de travail. Revue éditoriale et droits à établir sur le fichier final."
         entries[post["id"]] = {
             "state": state, "reason": reason, "source_until": valid_until,
             "expires_at": post.get("valid_until"), "revision": manifest.get("revision"),
@@ -224,7 +240,7 @@ def plan(facts, posts, snapshot, db, output, now):
                 writer.writerow({"proposed_paris": day.isoformat(), "state": "EMPTY", "reason": "Aucun sujet prévu."})
     with (output / "metriques-vierge.csv").open("w", newline="", encoding="utf-8-sig") as file:
         csv.writer(file).writerow(METRICS_FIELDS)
-    print(f"Local: {len(ready)} packs, {len(rows)} rows, {sum(row['state'] == 'RECHECK' for row in rows)} requiring recheck")
+    print(f"Local: {len(ready)} reviewed masters, {len(rows)} rows, {sum(row['state'] == 'RECHECK' for row in rows)} requiring recheck")
     return queue
 
 

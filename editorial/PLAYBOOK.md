@@ -7,7 +7,7 @@
 | Nom éditorial | GTA VI Edit FR |
 | Handles | TikTok `@gtavieditfr` vérifié dans Studio. Utiliser les handles réels de YouTube et d’Instagram après leur vérification. |
 | Bio | GTA VI en français. Infos sourcées et découvertes sans spoiler. Page de fans indépendante de Rockstar Games. |
-| Voix | Français, court, direct, textuel par défaut. Sous-titres en priorité. Un ton curieux, aucune emphase sur une info incertaine. |
+| Voix | Français parlé, court et direct. Les mots à l’écran aident à suivre le détail en lecture muette. Pour une scène d’ambiance, retenir un son dont l’usage est établi. |
 | Identité visuelle | Fond nuit, corail ou menthe, lettres claires. Avatar d'origine avec monogramme VI / FR, sans personnage, image de jeu, logo GTA/Rockstar ni imitation de profil officiel. Bannière simple avec nom et promesse. |
 | Post épinglé | Présenter les formats, les sources citées, la politique sans spoilers et le statut de page de fans. Préparer le texte avec les autres packs. |
 
@@ -24,15 +24,15 @@ Le nom, les horaires et le traitement peuvent évoluer après lecture de la marq
 
 ## Rédaction et montage
 
-- Une promesse claire dès la première seconde. 7 à 30 s par défaut. Environ trois séquences avec progression, sous-titres lisibles et une question précise si elle sert la vidéo. Éviter crédits cachés, spoilers dès la couverture, faux bruitages de jeu et extraits répétitifs.
+- Ouvrir sur l’action ou sur deux images qui donnent envie de comparer. Une scène apporte une observation, la suivante la précise, la fin explique pourquoi elle compte. Choisir la durée nécessaire à la démonstration. Les [références étudiées](REFERENCES.md) et le [pilote de 13 secondes](OCEAN_DRIVE.md) donnent les exemples de travail.
 - Export 1080×1920, 9:16, 30 fps, MP4 H.264, yuv420p, audio AAC. Texte hors bords, barre d'engagement et zones de légende. Vérifier les surcouches de chaque plateforme dans l'aperçu natif. Éviter filigrane, musique ou mix multicanal dont les droits n'ont pas été établis pour toutes les destinations.
 - Titre/couverture sans spoiler ni promesse spéculative. TikTok : accroche courte et tags pertinents. Instagram : 1 à 2 lignes utiles, source et 3 à 5 tags si adaptés. YouTube : titre descriptif distinct, description sourcée et audience à confirmer lors du dépôt. Source officielle ou crédit de clip en dernière ligne utile.
 - Formats : actualité (titre → 2 faits → source), astuce (objectif → actions vérifiées → résultat), analyse (élément observé → interprétation nommée → question), découverte/clip (contexte → détail original → crédit), rétro GTA V liée à VI, portrait, récapitulatif et question. Plusieurs variations du même fait ne remplissent pas plusieurs créneaux.
-- Pas de fuite, rumeur publiée, exploit, manipulation d'embargo, gore, nudité ou séquence d'histoire sensible dans le lot de lancement. Si un contenu généré risque de passer pour une scène réelle du jeu, remplace-le par une illustration explicite. Défaut : créations textuelles/animées originales.
+- Écarter fuites, rumeurs, manipulation d’embargo, gore, nudité et spoilers au lancement. Écarter les images qui simulent du gameplay. Chercher des plans officiels utilisables, une capture propre ou une comparaison avec une photo autorisée. Un sujet sans images qui étayent sa promesse reste un brief.
 
 ## Lot de 15 sujets
 
-P01–P03 sont écrits dans [seed.json](seed.json). P06–P08 et P14 sont écrits dans [series.json](series.json). Les sept packs déclinent les textes sur trois réseaux. Les autres sujets restent des briefs. P04 est bloqué en attendant la confirmation de disponibilité dans la région.
+Le tableau ci-dessous est la réserve historique de sujets. Les sept anciens rendus de [seed.json](seed.json) et [series.json](series.json) sont archivés comme cas de test. Pour reprendre un sujet, rechercher et monter des images propres à son propos. P02 est déjà public sur TikTok. P04 attend une preuve de disponibilité régionale.
 
 | ID | Pilier | Accroche et traitement | Condition |
 | --- | --- | --- | --- |
@@ -46,7 +46,7 @@ P01–P03 sont écrits dans [seed.json](seed.json). P06–P08 et P14 sont écrit
 | P08 | Question | Tu commences par la ville ou tu pars explorer ? Deux options en cartes. | Question et préférence, sans inventer un point de départ ou une mécanique. |
 | P09 | Astuce | Trois réglages à vérifier avant de jouer. | Capturer menus autorisés ou sourcer les réglages réels par console. Aucun réglage générique présenté comme portable. |
 | P10 | Rétro | De Los Santos à Vice City. Comparer les cadres des deux jeux avec deux plans originaux. | Vérifier chaque contexte dans deux fiches officielles. Aucune comparaison de taille sans mesure fiable. |
-| P11 | Découverte | Un détail remarqué pendant une partie. | Capture propre et droits compatibles, ou récit graphique sourcé. Si pas de preuve, remplacer par P08. |
+| P11 | Découverte | Un détail remarqué pendant une partie. | Capture propre et droits compatibles. Reprendre une autre idée si la preuve visuelle manque. |
 | P12 | Question | Quel secteur tu veux voir sans spoiler ? Utiliser la réponse comme idée. | Réponses authentiques. Éviter de publier les identifiants des commentateurs. |
 | P13 | Actualité | Qu'est-ce qui a changé depuis le lancement ? Tri sur 2 infos. | Deux annonces datées, indépendantes du même sujet. Reporter si vide. |
 | P14 | Astuce | Avant de chercher une option officielle, où vérifier ? Explique le bon canal de support. | Lien source actuel et étapes vérifiées. |

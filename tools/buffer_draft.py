@@ -10,7 +10,7 @@ from ipaddress import ip_address
 from urllib.parse import urlsplit
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 
-from pipeline import OUTPUT, SCHEMA, catalog, eligibility, prepare_pack, refresh, utcnow
+from pipeline import OUTPUT, SCHEMA, catalog, eligibility, prepare_pack, refresh, reviewed_master, utcnow
 from render_seeds import BRAND_PATH, PLATFORMS, ROOT
 
 API = "https://api.buffer.com"
@@ -194,7 +194,7 @@ def main():
     args = parser.parse_args()
     key = os.environ.get("BUFFER_API_KEY")
     if not key:
-        parser.exit(2, "BLOCK: BUFFER_API_KEY unavailable. Use the local pack in native Studio.\n")
+        parser.exit(2, "BLOCK: BUFFER_API_KEY unavailable.\n")
     if args.command == "channels":
         print(json.dumps(channels(key), indent=2))
         return
@@ -214,6 +214,8 @@ def main():
                 raise ValueError(reason)
             renderer = hashlib.sha256((ROOT / "tools" / "render_seeds.py").read_bytes() + BRAND_PATH.read_bytes()).hexdigest()
             manifest = prepare_pack(post, facts, OUTPUT, renderer)
+            if not reviewed_master(manifest):
+                raise ValueError("PREVIEW_ONLY: brouillon distant réservé à un montage validé.")
             media = OUTPUT / "packs" / args.content / "video.mp4"
             verify_asset(args.asset_url, manifest["sha256"], media.stat().st_size)
             urls = [url for fact_id in post["fact_ids"] for url in facts[fact_id]["sources"]]
