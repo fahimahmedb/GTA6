@@ -1,36 +1,74 @@
-# Plan d'exécution et gouvernance
+# Plan d'exécution
 
-## Phase 0 — Inventaire (en cours)
-- [x] Vérifier dépôt et permissions GitHub.
-- [x] Créer branche feature/automation-mvp.
-- [ ] Inventorier API et outils réellement disponibles.
-- [ ] Vérifier coûts, quotas, droits d'utilisation et limites de publication.
+## Résultat attendu d'une seule exécution
 
-## Phase 1 — Veille vérifiable
-- [ ] Construire un collecteur de sources officielles.
-- [ ] Déduplication par URL canonique et empreinte de contenu.
-- [ ] Journaliser URL, date de collecte, date de publication, citation et statut factuel.
-- [ ] Tests sur annonces réelles et contre-exemples (rumeur, doublon, date périmée).
+Atteindre le dernier stade que les outils, les droits et les comptes autorisent. Ordre de travail : **A → B → C/D → E**, avec E préparé même si un canal s'arrête en D. Un compte manquant arrête ses opérations distantes uniquement. Préparer le test de la plateforme suivante, les trois packs, la collecte, les mesures, la reprise et la vérification GitHub avant le bilan.
 
-## Phase 2 — Création
-- [ ] Scripts courts avec citations et contrôle des affirmations.
-- [ ] Gestion de médias propres ou explicitement autorisés.
-- [ ] Rendu vidéo vertical et sous-titres.
-- [ ] Test de sortie 1080×1920, audio et durée.
+| Lot | Travail à réaliser | Preuve de sortie |
+| --- | --- | --- |
+| A. Reprise et accès | Lire le HEAD et les fichiers. Vérifier Python/FFmpeg, accès HTTP, outils de recherche, comptes et connecteurs disponibles à lecture seule. Identifier l'outil de publication utilisable sans frais et les opérations permises par canal. | SHA de départ, commandes et résultats, matrice par canal avec compte GTA VI identifié ou absence, distinction outil exposé / accès réellement observé. |
+| B. Veille, rédaction et médias | Brancher au moins une source primaire actuelle en lecture seule. Implémenter normalisation, déduplication, preuves par fait et revue des claims. Préparer le lot de lancement et les trois premières vidéos avec visuels d'origine. | Collecte sur une source actuelle ou preuve de l'échec + voie de repli, faux positif refusé, trois packs ouvrables et contrôlés. |
+| C. Export et planning | Construire une file rejouable, un briefing et les métadonnées des trois plateformes. Produire l'aperçu de file sur sept jours avec statut pour chaque créneau. | Fichiers par canal avec vidéo, texte, horaires, sources, règles, digest, absent/bloqué selon le cas. Relancer et vérifier l'absence de doublon. |
+| D. Intégration publication | Priorité au canal dédié déjà accessible. Qualifier l'adaptateur sur données locales, puis accès distant à lecture seule. Créer un brouillon distant uniquement si l'accès, le périmètre et le canal le permettent déjà. Publier ou programmer seulement dans le périmètre expressément autorisé. | Journaux réels et ID de brouillon/file/post natif avec statut. Simulations identifiées. Un statut de file ne prouve pas la visibilité publique. |
+| E. Mesures et continuité | Préparer l'import des métriques par ID natif, la revue sur 7 jours, le journal de reprise et les instructions d'activation. Exécuter avec données réelles s'il y en a, puis qualifier séparément sur données synthétiques. | Rapport horodaté, valeurs absentes explicites, éventuel ID et preuve de lecture native, dernier commit vérifié et prochaines actions groupées. |
 
-## Phase 3 — Publication
-- [ ] Sélectionner une première plateforme selon accès API réel.
-- [ ] Publication en mode manuel/approbation par défaut.
-- [ ] Test bout-en-bout sur compte autorisé, puis seulement activation conditionnelle.
-- [ ] Anti-doublon et reprise sur erreur.
+Temps de lancement : commencer par vérifier la date et la situation **au moment où tu exécutes**. Ne pas attendre sept jours, un quota, un compte ou la première fenêtre H+24 pour finir le travail indépendant.
 
-## Phase 4 — Apprentissage
-- [ ] Collecter métriques réelles accessibles.
-- [ ] Comparer formats et horaires sans confondre corrélation et causalité.
-- [ ] Produire un rapport hebdomadaire.
+## A. Accès et choix du parcours
 
-## États de preuve
-PLANNED : conçu ; IMPLEMENTED : code écrit ; TESTED : test exécuté ; VERIFIED : résultat observé ; BLOCK : dépendance bloquante ; UNKNOWN : preuve absente ; PARK : hors périmètre immédiat.
+- Réutilise d'abord une marque GTA VI dédiée et un connecteur déjà autorisé. Un compte personnel ou une marque sans lien établi ne doit pas servir de compte de test.
+- TikTok, Instagram Reels, YouTube Shorts restent dans les trois exports. Si plusieurs comptes GTA VI sont utilisables au même stade, choisir celui qui permet la meilleure preuve en premier. À défaut de préférence, ordre de qualification : YouTube Shorts, Instagram Reels, TikTok. X, Threads, Facebook et crosspost textuel restent PARK.
+- Buffer est le parcours de référence des captures. Sa [tarification](https://buffer.com/pricing) indique jusqu'à trois canaux et dix publications en attente par canal en gratuit. Revérifie les quotas et le plan observé avant de construire la file réelle. Les [canaux et modes disponibles](https://support.buffer.com/en-us/articles/supported-channels-LM3P7Y4zsp) dépendent du compte. Instagram personnel peut relever de la notification. Utiliser compte pro pour l'autopublication Reels lorsque le canal le permet.
+- Si Metricool expose une marque GTA VI autorisée, interroger d'abord les paramètres et la file en lecture seule. Confirmer réseau, compte, fuseau et vidéo. Une demande de revue peut envoyer un message et certains modes peuvent programmer automatiquement. Vérifier la sémantique et l'autorisation avant toute mutation. Ne jamais détourner une marque non dédiée.
+- Si aucune route de publication authentifiée n'est utilisable, produire les trois packs locaux et un parcours de dépôt natif/Buffer. Générer localement sans clé. Ne pas remplacer un échec de nuit par une publication sur un mauvais compte.
+- API directes PARK tant que l'adaptateur de planification suffit. Si le cas le justifie, vérifier [TikTok Direct Post](https://developers.tiktok.com/docs/en/content-posting-api-reference-direct-post) et l'[audit YouTube API](https://developers.google.com/youtube/data/revision_history#july-28-2020) avant d'annoncer la publication publique. Respecter les scopes, le consentement, la visibilité, les validations et les modes prévus par le fournisseur.
+- Ne jamais écrire de clé dans le repo, les URL, les logs ou le bilan. Une future clé Buffer autorisée se lit via `BUFFER_API_KEY` injectée par le runtime. Zéro service payant obligatoire.
 
-## Risques matériels
-Droits d'auteur ; fausses nouvelles ; limitations des API sociales ; comptes suspendus ; coûts d'inférence et de rendu ; secrets exposés. Aucune promesse de monétisation.
+## B. Veille, faits et rendu
+
+- Connecte Rockstar GTA VI et Newswire, Rockstar Support et les annonces Take-Two. Stores PlayStation France/Xbox en corroboration régionale. Commence avec des pages suivies et leurs liens, sans dépendre de dépôts officieux ou de la disponibilité d'un flux supposé. Pour une page dynamique ou bloquée, l'outil de recherche avec ouverture de la source est une voie de secours. Conserve URL primaire, preuve courte paraphrasée, date source si connue, heure de lecture UTC, empreinte du contenu utile et résultat HTTP observé. Un extrait de recherche isolé ou un HTTP 200 sans contenu utile ne valide pas un claim.
+- Données à reprendre du [lot initial](../editorial/seed.json). Pour le moteur, conserve les dates d'annonce et de collecte séparément. Canonicalise hôte et chemin, enlève le suivi uniquement, préserve les paramètres porteurs de sens. Déduplique URL et empreinte du fait. Une modification substantielle sur la même URL devient une nouvelle version, jamais un doublon silencieux. Les sources de découverte ne passent pas directement dans le catalogue des faits.
+- Chaque affirmation matérielle du script, du carton, de la couverture et de la légende référence un ou plusieurs `fact_ids`. Les entrées prennent `confirmed`, `conflict`, `stale` ou `unverified`. Sépare angle éditorial et fait. Une contradiction met le seul contenu concerné en attente et lance une nouvelle vérification officielle. Données d'urgence/heure de sortie et disponibilité : nouvelle lecture juste avant mise en file et à proximité de l'heure prévue. Autres faits d'actualité : relecture sous 48 h, plus tôt si nouveau signal. Une date d'expiration passée rend le contenu inéligible, même si le média a été rendu. Pas de génération de rumeurs pour remplir un créneau.
+- Réutilise le moteur local `tools/render_seeds.py` et ajoute la voie de rendu pour les nouvelles entrées, sans créer une pile concurrente. FFmpeg/FFprobe, format de référence du playbook. Chaque export associe un fichier de sous-titres, un contrôle lisibilité et une provenance média. Préfère animation typographique originale, croquis schématique original ou jeu de cartes graphique. Vérifie au moins une image du début, du milieu et de la fin et écoute la piste réelle si elle est active.
+- Pour un clip tiers, l'autorisation couvre le segment, le propriétaire, la plateforme et le caractère commercial envisagé. Enregistre sa portée et une référence expurgée. Pour un montage, fais un commentaire ou développe un angle réel, sans extrapoler à partir des images. En l'absence d'autorisation exploitable, remplace la séquence par une création originale. Crédit, transformation et provenance officielle ont chacun une fonction distincte. Voir [Rockstar Support](https://support.rockstargames.com/articles/7bNaeoMFTV0iUDGhStTXvz/policy-on-posting-copyrighted-rockstar-games-material) et les [règles de contenu réutilisé YouTube](https://support.google.com/youtube/answer/1311392).
+
+## C. Contrat de file et reprise
+
+Rester sur Python et une base SQLite locale, sauf déjà mieux implémenté. Le fichier de travail est ignoré sous `output/`. Un rapport expurgé peut être versionné. Si exécutions éphémères, fournir une voie de sauvegarde/restauration durable de la base hors Git public avant toute activation.
+
+| Donnée | Champs minimaux |
+| --- | --- |
+| Fait versionné | `fact_id, source_urls, evidence, collected_at_utc, source_published_at, status, valid_until, content_sha256` |
+| Pack éditorial | `content_id, revision, title, pillar, fact_ids, script, captions_by_channel, assets_with_rights, rendered_sha256, qc, valid_until` |
+| Ligne de file | `content_id, platform, channel_id, revision, due_at_utc, state, mode, remote_id, native_id, native_url, last_error, updated_at` |
+| Mesure | `platform, native_id, captured_at, window_hours, views, likes, comments, shares, saves, retention, follower_count, source` |
+
+- Export sans identifiant de compte obligatoire. Utilise une destination logique par réseau pendant le mode local. Le pack contient le MP4, un SRT, un titre et une légende par canal, une proposition de couverture, les sources, la durée, le digest, le créneau proposé et son échéance. Les créneaux proposés n'ont aucun effet externe. Plan Paris en IANA `Europe/Paris`, stockage UTC avec zone, conversions DST et refus d'une date ambiguë ou expirée.
+- Pour une mutation, une seule ligne active par `content_id + platform + channel_id`, avec contrainte unique et réservation transactionnelle. La révision fige média et texte. Une modification d'horaire du même post ne doit pas créer un second post. Vérifie la file distante avant la première mutation, puis corrèle la réponse persistée à la ligne locale. Après timeout/échec ambigu, marque `UNKNOWN_REMOTE`, compare file et historique distants (compte, fenêtre, média, texte, ID s'il existe), puis rejoue seulement si l'absence est établie. Si la preuve est indisponible, poursuis sur les lignes indépendantes.
+- États attendus : `PLANNED → READY_LOCAL → DRAFT_REMOTE → SCHEDULED → PUBLISHED → MEASURED`. Le parcours manuel peut sauter deux états si la publication native est prouvée. `BLOCK`, `EXPIRED`, `UNKNOWN_REMOTE` et `FAILED` s'appliquent à la ligne. Journaliser les erreurs et transitions. Une notification à publier à la main n'est pas `PUBLISHED`.
+
+## D. Adaptateur Buffer et contrôle de diffusion
+
+1. Authentification future via [Quick Start](https://developers.buffer.com/guides/getting-started.html). Lire les organisations et canaux avant toute mutation. Sélectionner par type, handle dédié et identité du compte. Ne jamais déduire l'identité sur le nom du canal seul si ambigu.
+2. Préparer une requête locale conforme aux exemples. Pour un brouillon, [Create Draft Post](https://developers.buffer.com/examples/create-draft-post.html) utilise `saveToDraft: true`. Pour un créneau explicitement autorisé, [Create Scheduled Post](https://developers.buffer.com/examples/create-scheduled-post.html) utilise `customScheduled` et `dueAt`. Vérifier les métadonnées de la version actuelle (Reel Instagram, titre/audience YouTube selon route, préférences TikTok) sur le schéma ou l'interface du compte. Traiter les erreurs GraphQL et les réponses de mutation, y compris avec HTTP 200.
+3. [Create Video Post](https://developers.buffer.com/examples/create-video-post.html) et [Hosting Media](https://developers.buffer.com/guides/hosting-media.html) exigent une URL directe du MP4 accessible au fournisseur. Vérifier hors session, type vidéo, octets et durée de disponibilité jusqu'à l'envoi. Si l'hébergement public ou une URL à durée adaptée est absent ou hors autorisation, utiliser l'import du fichier local dans le parcours UI/natif autorisé ou livrer le pack manuel. Ne pas confondre un lien de partage, une URL d'artefact GitHub protégée ou une URL expirée avec le fichier accessible.
+4. Établir les preuves dans l'ordre applicable : requête locale et réponse témoin → accès lecture → ID du brouillon + relecture `draft` → ID de file + heure et canal relus → statut `sent` et URL/ID natif consulté → métriques sur cet ID. Vérifier que le mode, le compte et la visibilité correspondent au mandat. En cas de post erroné, suspendre les nouvelles mises en file concernées, préserver le reçu et appliquer la procédure de retrait du playbook.
+5. Une activation continue demande un runtime durable, un budget de 0 € respecté, la persistance du registre, un mécanisme d'arrêt et le périmètre public autorisé. Ajouter un planificateur sec/local si utile. Sur GitHub Actions, `schedule` et la découverte de `workflow_dispatch` dépendent de la [branche par défaut](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows). La CI de la branche peut tester par push, sous permissions de lecture et sans secrets. Ne pas fusionner dans `Claude` ni activer un cron public à partir d'une simple demande d'exécution du lot.
+
+## E. Mesures et essais
+
+- Premier parcours réel : une source primaire lue → un claim → un pack rendu et prouvé → décision de diffusion → preuve de l'état social effectivement atteint → mesure native si observable. En parallèle, recette locale possible dès maintenant : cas nominal, doublon URL/empreinte et relance, nouvelle version sur même URL, assertion sans source et fait expiré, erreur de droits, validation vidéo, compte erroné, expiration de l'hébergement, timeout après création suivie d'une réconciliation, métrique absente. Faire exécuter les tests et noter sortie et nombre. Pour le test d'anti-doublon réseau, simuler un fournisseur qui crée le post puis perd sa réponse.
+- Saisir les fenêtres H+12, H+24 et H+72 depuis l'heure **réelle** de publication. Laisser vide une mesure indisponible, garder zéro pour un zéro réellement observé. Préciser les définitions et trier par réseau, pilier et fenêtre. Utiliser médianes à fenêtre égale, pas de conclusion avant H+24, préférer H+72 pour décider. Pour un petit échantillon, signaler le nombre de posts et conserver une seule variable par expérience.
+- Préférer les métriques natives/exports réels. [Buffer indique](https://support.buffer.com/articles/using-buffers-api-GtIYIQilz5) que ses requêtes API de métriques sont expérimentales. Tester la lecture réelle avant d'en dépendre. À défaut, livrer le CSV et un import manuel reproductible avec des valeurs synthétiques clairement signalées pour la recette.
+- Mettre à jour `docs/ETAT.md` avec une ligne par canal, faits nouveaux, commandes, chemins et preuves. Si la publication réelle reste bloquée, les derniers champs du bilan sont l'étape exacte, les actions déjà prises, le compte ou l'autorisation nécessaires, le lien et l'ordre des clics. Aucun aller-retour pour un paramètre éditorial réversible.
+
+## Parcours manuel à livrer avec les packs
+
+| Destination | Ouvrir et préremplir | Point qui requiert une personne si l'accès manque |
+| --- | --- | --- |
+| Buffer | Publish → connecter un canal → OAuth du compte dédié → vérifier le handle → composer → joindre le MP4 local → brouillon. Si les trois canaux sont prêts, connecter les trois en une session. Voir [connexion](https://support.buffer.com/articles/connecting-your-channels-to-buffer-HvWLgAJvL9) et [publication](https://support.buffer.com/articles/getting-started-with-buffers-publishing-features-adhqleECyT). | Valider OAuth/MFA sur les comptes concernés. Avant programmation, confirmer le périmètre précis si absent du mandat. |
+| YouTube Shorts | [YouTube Studio](https://studio.youtube.com/) → Créer → Importer des vidéos → MP4 → titre, description, audience, visibilité. Identifier le brouillon et vérifier la classification avant diffusion. Voir [aide Shorts](https://support.google.com/youtube/answer/12779649). | Authentifier le canal dédié ou ouvrir le draft préparé. Contrôler l'audience et la visibilité choisies. |
+| Instagram Reels | App du compte dédié → Créer un Reel → charger le MP4 → couverture et description → brouillon si proposé. Pour Buffer auto, vérifier [l'option de connexion pro](https://support.buffer.com/en-us/articles/connecting-your-instagram-account-to-buffer-n9Ad6veXsu). | Authentifier le compte, choisir le type Créateur/Business si nécessaire et autorisé, ou valider une notification. |
+| TikTok | App du compte dédié → créer → importer le MP4 → couverture et description → brouillon si disponible. Voir [aide TikTok](https://support.tiktok.com/fr/using-tiktok/creating-videos/editing-posting-and-deleting). | Authentifier le compte ou reprendre le brouillon sur l'appareil où il a été créé. |
+
+Livrer les fichiers prêts avec chaque chemin, citer le canal prioritaire et préparer la décision de publication la plus simple. Une demande groupée doit proposer en une seule ligne le premier ensemble concret : compte visé, pack, texte exact, visibilité, heure/fuseau, cadence réelle éventuelle et lien d'approbation ou d'OAuth. Les choix déjà prouvés et autorisés ne reviennent pas dans cette demande.

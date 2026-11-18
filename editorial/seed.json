@@ -1,0 +1,79 @@
+{
+  "facts": {
+    "release-fr": {
+      "claim": "Rockstar annonçait le 19 novembre 2026 à minuit heure locale sur PS5 et Xbox Series X|S.",
+      "checked_on": "2026-11-18",
+      "sources": [
+        "https://www.rockstargames.com/VI",
+        "https://support.rockstargames.com/articles/29jV3Cv2cCgvwM1XgtMO5o/grand-theft-auto-vi-regional-pre-load-and-release-times-on-playstation-5-and-xbox-series-x-or-s",
+        "https://www.take2games.com/ir/news/take-two-interactive-software-inc-reports-results-fiscal-4"
+      ]
+    },
+    "vice-city": {
+      "claim": "Rockstar situe Vice City dans l’État de Leonida.",
+      "checked_on": "2026-11-18",
+      "sources": ["https://www.rockstargames.com/VI"]
+    },
+    "duo": {
+      "claim": "Le synopsis officiel présente Jason et Lucia. Une affaire qui devait être simple tourne mal et les entraîne dans une conspiration à travers Leonida.",
+      "checked_on": "2026-11-18",
+      "sources": ["https://www.rockstargames.com/VI"]
+    }
+  },
+  "posts": [
+    {
+      "id": "p01-heure-france",
+      "pillar": "LANCEMENT",
+      "palette": "coral",
+      "valid_until": "2026-11-19T00:00:00+01:00",
+      "fact_ids": ["release-fr"],
+      "cover": "GTA VI — quelle heure en France ?",
+      "scenes": [
+        {"seconds": 4, "headline": ["GTA VI", "À quelle heure ?"], "detail": "L’heure annoncée pour la France."},
+        {"seconds": 5, "headline": ["19 NOVEMBRE", "À MINUIT"], "detail": "Heure locale selon Rockstar."},
+        {"seconds": 5, "headline": ["PS5", "XBOX SERIES X|S"], "detail": "Consulte ton store avant de lancer."}
+      ],
+      "captions": {
+        "tiktok": {"title": "GTA VI : quelle heure en France ?", "body": "19 novembre 2026 à minuit, heure locale, selon Rockstar. PS5 et Xbox Series X|S. Source : Rockstar Support. #GTAVI #GTA6"},
+        "instagram": {"title": "GTA VI : heure annoncée en France", "body": "GTA VI est annoncé à minuit, heure française, dans la nuit du 18 au 19 novembre 2026. PS5 et Xbox Series X|S.\nSource : Rockstar Support.\n#GTAVI #GTA6 #RockstarGames"},
+        "youtube": {"title": "GTA VI : l’heure de lancement annoncée en France", "body": "Rockstar annonce le 19 novembre 2026 à 00 h 00, heure locale, sur PS5 et Xbox Series X|S. Vérifie la fiche de ton store. Source : Rockstar Support."}
+      }
+    },
+    {
+      "id": "p02-vice-city-leonida",
+      "pillar": "LES LIEUX",
+      "palette": "mint",
+      "valid_until": null,
+      "fact_ids": ["vice-city"],
+      "cover": "Vice City ou Leonida ?",
+      "scenes": [
+        {"seconds": 4, "headline": ["VICE CITY", "OU LEONIDA ?"], "detail": "La différence en 15 secondes."},
+        {"seconds": 5, "headline": ["VICE CITY", "LA VILLE"], "detail": "Un lieu de l’univers de GTA VI."},
+        {"seconds": 6, "headline": ["LEONIDA", "L’ÉTAT"], "detail": "Vice City en fait partie. Tu explores quoi en premier ?"}
+      ],
+      "captions": {
+        "tiktok": {"title": "Vice City ou Leonida ?", "body": "Vice City est la ville. Leonida est l’État où elle se trouve. Ville ou exploration pour ta première partie ? Source : Rockstar Games. #GTAVI #ViceCity"},
+        "instagram": {"title": "Se repérer dans l’univers de GTA VI", "body": "Vice City se trouve dans l’État de Leonida. Tu irais d’abord en ville ou tu partirais explorer ?\nSource : fiche officielle Rockstar Games.\n#GTAVI #GTA6 #ViceCity"},
+        "youtube": {"title": "Vice City et Leonida : la différence dans GTA VI", "body": "Rockstar situe Vice City dans l’État fictif de Leonida. Cette vidéo présente simplement la différence entre les deux noms. Source : Rockstar Games."}
+      }
+    },
+    {
+      "id": "p03-jason-lucia",
+      "pillar": "LES PERSONNAGES",
+      "palette": "lilac",
+      "valid_until": null,
+      "fact_ids": ["duo"],
+      "cover": "Jason et Lucia — le point de départ",
+      "scenes": [
+        {"seconds": 4, "headline": ["JASON", "ET LUCIA"], "detail": "Leur point de départ, sans spoiler."},
+        {"seconds": 5, "headline": ["UNE AFFAIRE", "QUI TOURNE MAL"], "detail": "C’est la prémisse du synopsis officiel."},
+        {"seconds": 6, "headline": ["UN DUO", "SOUS PRESSION"], "detail": "Notre lecture : Rockstar met leur relation au centre de l’accroche."}
+      ],
+      "captions": {
+        "tiktok": {"title": "Jason et Lucia : le point de départ", "body": "Une affaire tourne mal et l’histoire de GTA VI démarre. Notre lecture du synopsis : le duo porte l’accroche. Source : Rockstar Games. #GTAVI #GTA6"},
+        "instagram": {"title": "GTA VI : qui sont les deux noms du synopsis ?", "body": "Jason et Lucia sont les deux personnages au premier plan du synopsis officiel. Notre lecture : Rockstar donne d’emblée de la place à leur relation.\nSource : Rockstar Games.\n#GTAVI #GTA6 #RockstarGames"},
+        "youtube": {"title": "Jason et Lucia dans GTA VI : le synopsis en 15 secondes", "body": "Un résumé sans spoiler du point de départ présenté par Rockstar et une courte lecture éditoriale de la place du duo. Source : Rockstar Games."}
+      }
+    }
+  ]
+}

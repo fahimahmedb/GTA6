@@ -1,19 +1,17 @@
-# GTA6 — Content Automation
+# GTA VI — automatisation éditoriale
 
-Projet indépendant pour produire des vidéos verticales **exclusivement GTA 6**, sans visage, destinées à TikTok, Instagram Reels et YouTube Shorts.
+Produire des vidéos verticales francophones sur GTA VI avec des sources vérifiables, une identité indépendante et des visuels utilisables. Cibles : TikTok, Instagram Reels, YouTube Shorts.
 
-## État réel
-- Branche de travail créée et plan initial versionné.
-- Veille, montage, publication, récupération des métriques : **à implémenter et tester**.
-- Aucun accès social ni publication activés.
+## Reprendre le projet
 
-## Chaîne cible
-Sources officielles → vérification et déduplication → script → médias autorisés → vidéo 9:16 → validation → publication → mesures.
+Commencer par [AGENTS.md](AGENTS.md), puis suivre le [plan d'exécution](docs/PLAN.md) et le [guide éditorial](editorial/PLAYBOOK.md). Le [point de reprise](docs/ETAT.md) indique le dernier résultat observé. Le [lot initial](editorial/seed.json) contient les sources, les scènes et les textes par plateforme.
 
-## Principes
-- Budget minimal, solutions gratuites prioritaires.
-- Sources et droits traçables ; aucune rumeur présentée comme un fait.
-- Secrets exclus du dépôt ; publication désactivée par défaut.
-- Qualification par preuve d'exécution, pas par simple présence du code.
+Depuis la racine, avec Python 3.10+, FFmpeg et FFprobe, le filtre `ass` et la police DejaVu Sans :
 
-Voir [le plan](docs/PLAN.md).
+```bash
+python3 tools/render_seeds.py
+```
+
+Les trois répertoires produits sous `output/seeds/` contiennent un MP4, les sous-titres, les textes par plateforme, les sources et les résultats de contrôle. Ces aperçus servent à qualifier le montage. Le plan décrit la revalidation éditoriale avant diffusion et la suite du moteur.
+
+Le dépôt public conserve le code, les sources publiques, les décisions et les preuves expurgées. La chaîne de publication et ses accès distants sont à qualifier.
