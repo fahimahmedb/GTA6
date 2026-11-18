@@ -10,6 +10,7 @@ import textwrap
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+BRAND_PATH = ROOT / "editorial" / "brand.json"
 PALETTES = {
     "coral": ("FF896C", "1C1824"),
     "mint": ("9DF4CD", "121D25"),
@@ -52,7 +53,8 @@ def save_subtitles(post, path):
         tags = rf"{{\pos({x},{y})\fs{size}{style}}}"
         ass.append(f"Dialogue: 0,{timecode(start)},{timecode(stop)},Main,,0,0,0,,{tags}{text}")
 
-    write_line(0, end, 96, 320, 30, "DOSSIER  /  LEONIDA", rf"\b1\1c{color}\fsp4")
+    brand = json.loads(BRAND_PATH.read_text(encoding="utf-8"))
+    write_line(0, end, 96, 320, 30, brand["video_label"], rf"\b1\1c{color}\fsp4")
     write_line(0, end, 96, 1392, 28, "GTA VI  /  PAGE DE FANS INDÉPENDANTE", r"\1c&HDDCFC9&")
 
     start = 0

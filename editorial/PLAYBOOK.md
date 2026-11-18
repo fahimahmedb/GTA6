@@ -1,14 +1,14 @@
 # Guide éditorial GTA VI
 
-## Identité proposée
+## Identité de la page
 
 | Champ | Valeur de préparation |
 | --- | --- |
-| Nom | Dossier Leonida |
-| Handles, ordre de test | `@dossierleonida`, `@dossier.leonida`, `@leonidaenbref`. Disponibilité à vérifier au moment de l'ouverture. Réutiliser une identité GTA VI dédiée déjà validée. |
+| Nom éditorial | GTA VI Edit FR |
+| Handles | TikTok `@gtavieditfr` vérifié dans Studio. Utiliser les handles réels de YouTube et d’Instagram après leur vérification. |
 | Bio | GTA VI en français. Infos sourcées et découvertes sans spoiler. Page de fans indépendante de Rockstar Games. |
 | Voix | Français, court, direct, textuel par défaut. Sous-titres en priorité. Un ton curieux, aucune emphase sur une info incertaine. |
-| Identité visuelle | Fond nuit, corail ou menthe, lettres claires. Avatar d'origine avec monogramme DL, sans personnage, image de jeu, logo GTA/Rockstar ni imitation de profil officiel. Bannière simple avec nom et promesse. |
+| Identité visuelle | Fond nuit, corail ou menthe, lettres claires. Avatar d'origine avec monogramme VI / FR, sans personnage, image de jeu, logo GTA/Rockstar ni imitation de profil officiel. Bannière simple avec nom et promesse. |
 | Post épinglé | Présenter les formats, les sources citées, la politique sans spoilers et le statut de page de fans. Préparer le texte avec les autres packs. |
 
 Le nom, les horaires et le traitement peuvent évoluer après lecture de la marque et des résultats. Les valeurs servent à préparer tous les exports, indépendamment de la réservation des comptes.
@@ -32,7 +32,7 @@ Le nom, les horaires et le traitement peuvent évoluer après lecture de la marq
 
 ## Lot de 15 sujets
 
-P01–P03 sont écrits dans [seed.json](seed.json) avec trois variantes de publication. P04–P15 sont des briefs de rédaction. Les lignes en attente restent inéligibles jusqu'à leur vérification.
+P01–P03 sont écrits dans [seed.json](seed.json). P06–P08 et P14 sont écrits dans [series.json](series.json). Les sept packs déclinent les textes sur trois réseaux. Les autres sujets restent des briefs. P04 est bloqué en attendant la confirmation de disponibilité dans la région.
 
 | ID | Pilier | Accroche et traitement | Condition |
 | --- | --- | --- | --- |

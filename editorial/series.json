@@ -1,0 +1,239 @@
+{
+  "facts": {
+    "extended-look": {
+      "claim": "PlayStation indique que l’aperçu prolongé GTA VI a été capturé entièrement dans le jeu sur PS5.",
+      "sources": [
+        "https://www.playstation.com/en-us/games/grand-theft-auto-vi/"
+      ]
+    },
+    "official-trailers": {
+      "claim": "Rockstar réunit sur la fiche du jeu la bande-annonce de lancement et les bandes-annonces 1 et 2.",
+      "sources": [
+        "https://www.rockstargames.com/VI"
+      ]
+    },
+    "leonida-keys": {
+      "claim": "Rockstar présente les Leonida Keys et relie le passé de Jason à cette zone dans son portrait officiel.",
+      "sources": [
+        "https://www.rockstargames.com/VI/only-in-leonida"
+      ]
+    },
+    "regional-support": {
+      "claim": "Rockstar Support publie un article sur les horaires régionaux de préchargement et de sortie sur PS5 et Xbox Series X|S.",
+      "sources": [
+        "https://support.rockstargames.com/articles/29jV3Cv2cCgvwM1XgtMO5o/grand-theft-auto-vi-regional-pre-load-and-release-times-on-playstation-5-and-xbox-series-x-or-s"
+      ]
+    }
+  },
+  "posts": [
+    {
+      "id": "p04-sortie-france",
+      "state": "HOLD",
+      "reason": "Il faut une preuve de disponibilité réelle sur un store France après l’heure locale annoncée.",
+      "cover": "GTA VI est-il disponible en France ?",
+      "next_check": "Ouvrir la fiche France du store. Relever la plateforme et la disponibilité effective. Rédiger au présent uniquement après cette preuve."
+    },
+    {
+      "id": "p06-apercu-ps5",
+      "pillar": "ANALYSE VIDÉO",
+      "palette": "lilac",
+      "valid_until": null,
+      "fact_ids": [
+        "extended-look",
+        "official-trailers"
+      ],
+      "cover": "GTA VI — que montre l’aperçu PS5 ?",
+      "scenes": [
+        {
+          "seconds": 4,
+          "headline": [
+            "GTA VI",
+            "L’APERÇU PS5"
+          ],
+          "detail": "Regarde les mots utilisés par PlayStation."
+        },
+        {
+          "seconds": 5,
+          "headline": [
+            "CAPTURÉ",
+            "DANS LE JEU"
+          ],
+          "detail": "C’est ainsi que PlayStation décrit l’aperçu prolongé capturé sur PS5."
+        },
+        {
+          "seconds": 5,
+          "headline": [
+            "LA SOURCE",
+            "AVANT L’AVIS"
+          ],
+          "detail": "Cette description concerne l’aperçu. Rockstar réunit aussi ses bandes-annonces sur la fiche du jeu."
+        }
+      ],
+      "captions": {
+        "tiktok": {
+          "title": "Aperçu GTA VI sur PS5",
+          "body": "PlayStation décrit son aperçu prolongé comme entièrement capturé dans le jeu sur PS5. Pour voir de quelle vidéo il s’agit, pars de la fiche officielle. #GTAVI #PS5"
+        },
+        "instagram": {
+          "title": "Bien lire la mention sur l’aperçu GTA VI",
+          "body": "La mention « capturé dans le jeu sur PS5 » accompagne l’aperçu prolongé. Sources : PlayStation et la fiche GTA VI de Rockstar.\n#GTAVI #GTA6 #PS5"
+        },
+        "youtube": {
+          "title": "GTA VI : comment PlayStation décrit l’aperçu prolongé",
+          "body": "PlayStation précise l’origine des images de cet aperçu. Rockstar réunit ses bandes-annonces sur la fiche officielle du jeu."
+        }
+      }
+    },
+    {
+      "id": "p07-leonida-keys",
+      "pillar": "LES LIEUX",
+      "palette": "mint",
+      "valid_until": null,
+      "fact_ids": [
+        "leonida-keys"
+      ],
+      "cover": "GTA VI — les Leonida Keys",
+      "scenes": [
+        {
+          "seconds": 4,
+          "headline": [
+            "HORS DE",
+            "VICE CITY"
+          ],
+          "detail": "Une zone à repérer sur le site Rockstar."
+        },
+        {
+          "seconds": 5,
+          "headline": [
+            "LEONIDA",
+            "KEYS"
+          ],
+          "detail": "Le nom figure dans la présentation officielle de Leonida."
+        },
+        {
+          "seconds": 5,
+          "headline": [
+            "UN LIEN",
+            "AVEC JASON"
+          ],
+          "detail": "Rockstar relie le passé de Jason aux Keys dans son portrait officiel."
+        }
+      ],
+      "captions": {
+        "tiktok": {
+          "title": "Zoom sur les Leonida Keys",
+          "body": "Rockstar présente les Leonida Keys et les relie au passé de Jason. #GTAVI #LeonidaKeys"
+        },
+        "instagram": {
+          "title": "Leonida Keys, une zone à repérer",
+          "body": "Les Leonida Keys figurent sur le site Rockstar. Son portrait de Jason mentionne aussi son passé dans les Keys.\n#GTAVI #GTA6 #LeonidaKeys"
+        },
+        "youtube": {
+          "title": "Les Leonida Keys dans GTA VI : le lien avec Jason",
+          "body": "Rockstar présente cette zone dans son guide de Leonida et la relie au passé de Jason dans son portrait officiel."
+        }
+      }
+    },
+    {
+      "id": "p08-ville-ou-exploration",
+      "pillar": "LA QUESTION",
+      "palette": "coral",
+      "valid_until": null,
+      "fact_ids": [
+        "vice-city",
+        "leonida-keys"
+      ],
+      "cover": "Vice City ou les Keys ?",
+      "scenes": [
+        {
+          "seconds": 3,
+          "headline": [
+            "TON PREMIER",
+            "DÉTOUR ?"
+          ],
+          "detail": "Deux lieux présentés par Rockstar."
+        },
+        {
+          "seconds": 5,
+          "headline": [
+            "VICE CITY",
+            "CÔTÉ VILLE"
+          ],
+          "detail": "Pour les rues et l’ambiance urbaine."
+        },
+        {
+          "seconds": 5,
+          "headline": [
+            "LES KEYS",
+            "CÔTÉ EXPLORATION"
+          ],
+          "detail": "Pour changer de décor. Lequel tu choisis ?"
+        }
+      ],
+      "captions": {
+        "tiktok": {
+          "title": "Vice City ou les Keys ?",
+          "body": "Tu commencerais par explorer Vice City ou les Leonida Keys ? Les deux lieux sont présentés par Rockstar. #GTAVI #GTA6"
+        },
+        "instagram": {
+          "title": "Choisis ton premier détour dans GTA VI",
+          "body": "Vice City ou les Leonida Keys ? Dis-moi ce que tu veux découvrir en premier.\nSource : Rockstar Games.\n#GTAVI #ViceCity #LeonidaKeys"
+        },
+        "youtube": {
+          "title": "Vice City ou les Leonida Keys : tu explores quoi en premier ?",
+          "body": "Deux décors présentés sur le site officiel de Rockstar. Quel lieu t’intéresse le plus ?"
+        }
+      }
+    },
+    {
+      "id": "p14-trouver-info-officielle",
+      "pillar": "MODE D’EMPLOI",
+      "palette": "mint",
+      "valid_until": null,
+      "fact_ids": [
+        "regional-support"
+      ],
+      "cover": "GTA VI — où vérifier une info officielle ?",
+      "scenes": [
+        {
+          "seconds": 4,
+          "headline": [
+            "UNE INFO",
+            "GTA VI À VÉRIFIER ?"
+          ],
+          "detail": "Exemple : les horaires de lancement."
+        },
+        {
+          "seconds": 5,
+          "headline": [
+            "ROCKSTAR",
+            "SUPPORT"
+          ],
+          "detail": "Cherche l’article sur les horaires régionaux de GTA VI."
+        },
+        {
+          "seconds": 5,
+          "headline": [
+            "TA RÉGION",
+            "TA CONSOLE"
+          ],
+          "detail": "Vérifie la ligne qui correspond à ton cas, puis la fiche de ton store."
+        }
+      ],
+      "captions": {
+        "tiktok": {
+          "title": "Où vérifier une info GTA VI ?",
+          "body": "Pour les horaires, pars de l’article GTA VI de Rockstar Support, puis regarde ton store. #GTAVI #GTA6"
+        },
+        "instagram": {
+          "title": "Retrouver la source des horaires GTA VI",
+          "body": "Rockstar Support publie les horaires régionaux. Consulte l’article, puis vérifie la fiche de ton store et le modèle de ta console.\n#GTAVI #GTA6 #RockstarGames"
+        },
+        "youtube": {
+          "title": "Comment retrouver les horaires officiels GTA VI",
+          "body": "L’article Rockstar Support consacré aux horaires régionaux sert de point de départ. Vérifie aussi la fiche de ton store."
+        }
+      }
+    }
+  ]
+}
